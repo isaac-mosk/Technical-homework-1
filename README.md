@@ -1,4 +1,3 @@
 # Technical-homework-1
 
-#ok
-#this is attempt 2
+#this is the last time I'll try it
