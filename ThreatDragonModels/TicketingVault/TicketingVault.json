@@ -589,7 +589,34 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ec857cfa-1270-4f2e-ae54-7e43f6172f90",
+                  "title": "Unauthorized User Access",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Unauthorized user gains access to another user's account",
+                  "mitigation": "Two factor authentication",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 5,
+                  "score": "3"
+                },
+                {
+                  "id": "aad3379b-393f-48c7-b4bb-b2636d181918",
+                  "title": "Server Crash",
+                  "status": "Transferred",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "The server crashes, causing users to either fail to access services or fail to receive tickets",
+                  "mitigation": "Regular maintenance ",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 7,
+                  "score": "1"
+                }
+              ]
             }
           },
           {
@@ -1252,11 +1279,13 @@
                 "text": "Relational Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1353,13 +1382,27 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d87bae1b-7d54-4099-ab53-632589654567",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "default",
+                  "new": true,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1395,6 +1438,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "Isaac",
-    "threatTop": 4
+    "threatTop": 7
   }
 }
