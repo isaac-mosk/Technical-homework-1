@@ -1053,53 +1053,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Send Ticket",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Send Ticket"
-            ],
-            "id": "8454a9a1-2d03-4631-be09-6ba03ea47154",
-            "source": {
-              "cell": "00eb9bdc-24b3-44b4-b8bb-4bedb1bb0c6d",
-              "port": "e1e12d0b-4764-4d32-9315-e2f0a9fa04cd"
-            },
-            "target": {
-              "cell": "59cc0031-f8e8-49fe-beab-09710999a980",
-              "port": "2fa3f109-f42b-4098-a82c-8d93517bcbfc"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Elevated Permissions",
               "description": "",
               "outOfScope": false,
@@ -1126,6 +1079,149 @@
               "port": "df082e4d-98aa-465f-951e-ad8be2f75f7e"
             },
             "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send Payment\nToken",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Send Payment\nToken"
+            ],
+            "id": "ebcc3706-0dba-4519-b6c3-05b253020b91",
+            "source": {
+              "cell": "00eb9bdc-24b3-44b4-b8bb-4bedb1bb0c6d",
+              "port": "e1e12d0b-4764-4d32-9315-e2f0a9fa04cd"
+            },
+            "target": {
+              "cell": "59cc0031-f8e8-49fe-beab-09710999a980",
+              "port": "2fa3f109-f42b-4098-a82c-8d93517bcbfc"
+            },
+            "vertices": []
+          },
+          {
+            "position": {
+              "x": 420,
+              "y": 410
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Contains Ticket/QR"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "68639f6a-7f8e-4870-99b4-2789515b7108",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Text",
+              "name": "Contains Ticket/QR",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 150,
+              "y": 40
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer PII"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "f76f8af7-d767-48ac-867a-64688dd0804d",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Text",
+              "name": "Customer PII",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 686,
+              "y": 30
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Customer PII"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "3f9a4bd8-2ab1-45ee-ac65-c2b3846cab33",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Text",
+              "name": "Customer PII",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 308,
+              "y": 160
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Credentials/\nSession Tokens"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "7c839ce4-0328-4f87-916b-990903a2b589",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Text",
+              "name": "Credentials/\nSession Tokens",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
