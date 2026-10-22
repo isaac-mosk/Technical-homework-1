@@ -1,0 +1,18 @@
+{
+  "version": "2.6.2",
+  "release_version": "1",
+  "released_at": "2026-10-22",
+  "summary": {
+    "title": "TicketingVault",
+    "owner": "Isaac",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 1,
+    "reviewer": "Isaac",
+    "threatTop": 0
+  }
+}
