@@ -20,6 +20,96 @@
         "version": "2.6.2",
         "cells": [
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "User and server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "User and server"
+            ],
+            "id": "a41dc7bc-7d8c-4896-b88f-8be5346a9b80",
+            "source": {
+              "x": 670,
+              "y": 360
+            },
+            "target": {
+              "cell": "59cc0031-f8e8-49fe-beab-09710999a980",
+              "port": "2fa3f109-f42b-4098-a82c-8d93517bcbfc"
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "User and Server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "User and Server"
+            ],
+            "id": "f315dacd-c489-4bc8-8681-edc910df7e59",
+            "source": {
+              "x": 304,
+              "y": 130
+            },
+            "target": {
+              "cell": "7e4d2c77-2735-44bf-a4dc-897cb0c883a9",
+              "port": "d3f56ac8-6319-4e25-9e02-5c1058f7ae09"
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": -1,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "User and server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "User and server"
+            ],
+            "id": "9452d82a-a155-48f4-a851-9834ebb4589a",
+            "source": {
+              "x": 736,
+              "y": 130
+            },
+            "target": {
+              "cell": "7e4d2c77-2735-44bf-a4dc-897cb0c883a9",
+              "port": "b3507c13-073a-4fb6-b06d-80204f7afd2f"
+            },
+            "vertices": [
+              {
+                "x": 810,
+                "y": 230
+              }
+            ]
+          },
+          {
             "position": {
               "x": 230,
               "y": 80
@@ -40,6 +130,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +214,6 @@
               ]
             },
             "id": "72964e98-d42f-4e42-8fbd-1fd713515240",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Customer Web \nApplication",
@@ -157,6 +247,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -240,7 +331,6 @@
               ]
             },
             "id": "4a497976-e7c7-4a3c-892f-92ec24a9dd4b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Customer Mobile\nApp",
@@ -274,6 +364,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -357,7 +448,6 @@
               ]
             },
             "id": "38254a88-3d42-46ba-94d9-88b21a4d16c5",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Organizer Web\nPortal",
@@ -367,7 +457,21 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "40ef3185-5493-45b8-9f8d-7cef758666ae",
+                  "title": "Unauthorized Admin Access",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Unauthorized Admin Access",
+                  "mitigation": "Two factor authentication",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 2,
+                  "score": "4"
+                }
+              ]
             },
             "children": []
           },
@@ -392,6 +496,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -475,7 +580,6 @@
               ]
             },
             "id": "7e4d2c77-2735-44bf-a4dc-897cb0c883a9",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "API Application\nServer",
@@ -509,6 +613,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -592,7 +697,6 @@
               ]
             },
             "id": "00eb9bdc-24b3-44b4-b8bb-4bedb1bb0c6d",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Payment \nGateway",
@@ -605,13 +709,27 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e5f90049-fc27-452e-94d7-2ba4e4aba20d",
+                  "title": "Payment theft",
+                  "status": "Avoided",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Payment is hijacked and sent to third party",
+                  "mitigation": "Secure payment server+database",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 3,
+                  "score": "5"
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": 442.5,
-              "y": 350
+              "x": 460,
+              "y": 400
             },
             "size": {
               "width": 90,
@@ -629,6 +747,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -712,7 +831,6 @@
               ]
             },
             "id": "59cc0031-f8e8-49fe-beab-09710999a980",
-            "zIndex": 7,
             "data": {
               "type": "tm.Process",
               "name": "Email/SMS \nProvider",
@@ -725,7 +843,21 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "bff37ba4-be21-4bdb-9677-dcddb84e87fa",
+                  "title": "Ticket Theft",
+                  "status": "Accepted",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Ticket is stolen from the user",
+                  "mitigation": "2FA, refund service",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 4,
+                  "score": "3"
+                }
+              ]
             }
           },
           {
@@ -889,53 +1021,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Send Payment\nToken",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Send Payment\nToken"
-            ],
-            "id": "ebcc3706-0dba-4519-b6c3-05b253020b91",
-            "source": {
-              "cell": "00eb9bdc-24b3-44b4-b8bb-4bedb1bb0c6d",
-              "port": "e1e12d0b-4764-4d32-9315-e2f0a9fa04cd"
-            },
-            "target": {
-              "cell": "59cc0031-f8e8-49fe-beab-09710999a980",
-              "port": "2fa3f109-f42b-4098-a82c-8d93517bcbfc"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Read/Write",
               "description": "",
               "outOfScope": false,
@@ -1011,9 +1096,56 @@
             "vertices": []
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Send Payment\nToken",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Send Payment\nToken"
+            ],
+            "id": "ebcc3706-0dba-4519-b6c3-05b253020b91",
+            "source": {
+              "cell": "00eb9bdc-24b3-44b4-b8bb-4bedb1bb0c6d",
+              "port": "e1e12d0b-4764-4d32-9315-e2f0a9fa04cd"
+            },
+            "target": {
+              "cell": "59cc0031-f8e8-49fe-beab-09710999a980",
+              "port": "387f9b9b-dd9d-4b03-a2c0-b6a5a5e4cced"
+            },
+            "vertices": []
+          },
+          {
             "position": {
-              "x": 420,
-              "y": 410
+              "x": 460,
+              "y": 460
             },
             "size": {
               "width": 112.5,
@@ -1026,8 +1158,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "68639f6a-7f8e-4870-99b4-2789515b7108",
             "zIndex": 11,
+            "id": "68639f6a-7f8e-4870-99b4-2789515b7108",
             "data": {
               "type": "tm.Text",
               "name": "Contains Ticket/QR",
@@ -1050,8 +1182,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "f76f8af7-d767-48ac-867a-64688dd0804d",
             "zIndex": 12,
+            "id": "f76f8af7-d767-48ac-867a-64688dd0804d",
             "data": {
               "type": "tm.Text",
               "name": "Customer PII",
@@ -1074,8 +1206,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "3f9a4bd8-2ab1-45ee-ac65-c2b3846cab33",
             "zIndex": 13,
+            "id": "3f9a4bd8-2ab1-45ee-ac65-c2b3846cab33",
             "data": {
               "type": "tm.Text",
               "name": "Customer PII",
@@ -1098,8 +1230,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "7c839ce4-0328-4f87-916b-990903a2b589",
             "zIndex": 14,
+            "id": "7c839ce4-0328-4f87-916b-990903a2b589",
             "data": {
               "type": "tm.Text",
               "name": "Credentials/\nSession Tokens",
@@ -1108,8 +1240,8 @@
           },
           {
             "position": {
-              "x": 420,
-              "y": 230
+              "x": 416.25,
+              "y": 260
             },
             "size": {
               "width": 120,
@@ -1130,6 +1262,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1213,7 +1346,6 @@
               ]
             },
             "id": "d3900091-1ddf-47cd-aa22-64b8f63353b0",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "Relational Database",
@@ -1229,12 +1361,40 @@
               "storesInventory": false,
               "threats": []
             }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 16,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Admin and server",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Admin and server"
+            ],
+            "id": "f552e4f8-eb2a-4485-95ff-127b6964b39b",
+            "source": {
+              "x": 520,
+              "y": 80
+            },
+            "target": {
+              "cell": "7e4d2c77-2735-44bf-a4dc-897cb0c883a9",
+              "port": "b3507c13-073a-4fb6-b06d-80204f7afd2f"
+            }
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "Isaac",
-    "threatTop": 0
+    "threatTop": 4
   }
 }
